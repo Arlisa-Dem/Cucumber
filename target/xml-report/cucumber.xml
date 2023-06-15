@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="20.865" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="failed_test_case" name="TC_01_customer_login_test_negative" time="19.86">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.BlueRentalStepDefs.testFails(BlueRentalStepDefs.java:125)
+	at ✽.test fails(file:///C:/Users/49163/IdeaProjects/mycucumberproject/src/test/resources/features/day29_failed_test_cases.feature:14)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user navigates to "https://www.bluerentalcars.com/"...................passed
+When user clicks on login button............................................passed
+And user enters username and password.......................................passed
+And user clicks on login submit button......................................passed
+And test fails..............................................................failed
+Then verify the login is successful.........................................skipped
+When capture screenshot.....................................................skipped
+And user logs out the application...........................................skipped
+And close the application...................................................skipped
+]]></system-out>
+</testcase>
+</testsuite>

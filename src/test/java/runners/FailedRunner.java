@@ -4,9 +4,10 @@ package runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
-//        ADDING CONFIGURATIONS
+//      This runner class will run only failed scenarios
         plugin = {
                 "pretty",
                 "html:target/default-cucumber-reports.html",
@@ -16,12 +17,12 @@ import org.junit.runner.RunWith;
         },
 
         //monochrome = false,
-                features = "./src/test/resources/features",//PATH OF FEATURES FOLDER
-        glue = {"stepdefinitions","hooks"},//PATH OF STEPDEFINITIONS FOLDER
-        dryRun = false,//GENERATES ONLY MISSING STEPS DEFS WHEN dryRun = true
-        tags = "@failed_test_case"
+        features = "@target/failedRerun.txt",//Declare features as @target/failedRerun.txt
+        glue = {"stepdefinitions","hooks"},
+        dryRun = false
+        //There will be no tag
 )
-public class Runner {
+public class FailedRunner {
 }
 
 
