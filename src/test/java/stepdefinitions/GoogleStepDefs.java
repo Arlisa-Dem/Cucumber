@@ -46,4 +46,9 @@ public class GoogleStepDefs {
         Assert.assertFalse(Driver.getDriver().getTitle().contains(string));
 
     }
+
+    @Given("user is on the google home page")
+    public void userIsOnTheGoogleHomePage() {
+
+    }
 }

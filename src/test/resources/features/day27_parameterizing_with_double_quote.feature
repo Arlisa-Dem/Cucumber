@@ -1,4 +1,4 @@
-@parameterizing1
+@parameterizing1 @test_runner
 
   Feature: search_feature
 
@@ -10,7 +10,6 @@
         And user search for "iPhone"
         Then verify the page title contains "iPhone"
         Then close the application
-
 
     Scenario: TC02_iphone_search
       And user search for "tesla"

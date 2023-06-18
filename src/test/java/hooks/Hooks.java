@@ -13,17 +13,17 @@ public class Hooks {
     //Notes: We need to declare hooks package inside Runner class at the glue step-- glue = {"stepdefinitions","hooks"},
 
     @Before// This annotation must be imported from --> io.cucumber.java.Before
-    public void setUp(){
+    public void setUp() {
         //This method will work before each scenario
         System.out.println("This is @Before method from Hooks class");
     }
 
     @After
-    public void tearDown(Scenario scenario){
-        //If the scenario fails the screenshot will be attached into report
-        final byte[] screenshot;
-        if (scenario.isFailed()) {
-            screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+    public void tearDown(Scenario scenario) {
+//        AFTER EACH SCENARIO
+//        System.out.println("AFTER METHOD");
+        if (scenario.isFailed()) {//attach the report only if a scenario fails
+            final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "screenshots");
             Driver.closeDriver();
         }

@@ -1,25 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="20.865" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="failed_test_case" name="TC_01_customer_login_test_negative" time="19.86">
+<testsuite name="Cucumber" time="106.912" tests="7" skipped="0" failures="7" errors="0">
+<testcase classname="search_feature" name="search_scenario - test data - Example #1.1" time="17.942">
 <failure type="java.lang.AssertionError">
 <![CDATA[java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinitions.BlueRentalStepDefs.testFails(BlueRentalStepDefs.java:125)
-	at ✽.test fails(file:///C:/Users/49163/IdeaProjects/mycucumberproject/src/test/resources/features/day29_failed_test_cases.feature:14)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.GoogleStepDefs.verify_the_page_title_contains(GoogleStepDefs.java:46)
+	at ✽.verify the page title contains "bmw"(file:///C:/Users/49163/IdeaProjects/mycucumberproject/./src/test/resources/features/day27_scenario_outline_1.feature:10)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given user navigates to "https://www.bluerentalcars.com/"...................passed
-When user clicks on login button............................................passed
-And user enters username and password.......................................passed
-And user clicks on login submit button......................................passed
-And test fails..............................................................failed
-Then verify the login is successful.........................................skipped
-When capture screenshot.....................................................skipped
-And user logs out the application...........................................skipped
-And close the application...................................................skipped
+Given user navigates to "https://www.google.com"............................passed
+And user search for "bmw"...................................................passed
+Then verify the page title contains "bmw"...................................failed
+Then close the application..................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="search_feature" name="search_scenario - test data - Example #1.2" time="20.701">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.GoogleStepDefs.verify_the_page_title_contains(GoogleStepDefs.java:46)
+	at ✽.verify the page title contains "tesla"(file:///C:/Users/49163/IdeaProjects/mycucumberproject/./src/test/resources/features/day27_scenario_outline_1.feature:10)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user navigates to "https://www.google.com"............................passed
+And user search for "tesla".................................................passed
+Then verify the page title contains "tesla".................................failed
+Then close the application..................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="search_feature" name="search_scenario - test data - Example #1.3" time="17.422">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.GoogleStepDefs.verify_the_page_title_contains(GoogleStepDefs.java:46)
+	at ✽.verify the page title contains "mercedes"(file:///C:/Users/49163/IdeaProjects/mycucumberproject/./src/test/resources/features/day27_scenario_outline_1.feature:10)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user navigates to "https://www.google.com"............................passed
+And user search for "mercedes"..............................................passed
+Then verify the page title contains "mercedes"..............................failed
+Then close the application..................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="search_feature" name="search_scenario - test data - Example #1.4" time="13.052">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.GoogleStepDefs.verify_the_page_title_contains(GoogleStepDefs.java:46)
+	at ✽.verify the page title contains "apple"(file:///C:/Users/49163/IdeaProjects/mycucumberproject/./src/test/resources/features/day27_scenario_outline_1.feature:10)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user navigates to "https://www.google.com"............................passed
+And user search for "apple".................................................passed
+Then verify the page title contains "apple".................................failed
+Then close the application..................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="search_feature" name="search_scenario - test data - Example #1.5" time="11.308">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.GoogleStepDefs.verify_the_page_title_contains(GoogleStepDefs.java:46)
+	at ✽.verify the page title contains "iphone"(file:///C:/Users/49163/IdeaProjects/mycucumberproject/./src/test/resources/features/day27_scenario_outline_1.feature:10)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user navigates to "https://www.google.com"............................passed
+And user search for "iphone"................................................passed
+Then verify the page title contains "iphone"................................failed
+Then close the application..................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="search_feature" name="search_scenario - test data - Example #1.6" time="13.282">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.GoogleStepDefs.verify_the_page_title_contains(GoogleStepDefs.java:46)
+	at ✽.verify the page title contains "banana"(file:///C:/Users/49163/IdeaProjects/mycucumberproject/./src/test/resources/features/day27_scenario_outline_1.feature:10)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user navigates to "https://www.google.com"............................passed
+And user search for "banana"................................................passed
+Then verify the page title contains "banana"................................failed
+Then close the application..................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="search_feature" name="search_scenario - test data - Example #1.7" time="12.698">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.GoogleStepDefs.verify_the_page_title_contains(GoogleStepDefs.java:46)
+	at ✽.verify the page title contains "porcelain tea pot"(file:///C:/Users/49163/IdeaProjects/mycucumberproject/./src/test/resources/features/day27_scenario_outline_1.feature:10)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user navigates to "https://www.google.com"............................passed
+And user search for "porcelain tea pot".....................................passed
+Then verify the page title contains "porcelain tea pot".....................failed
+Then close the application..................................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>
