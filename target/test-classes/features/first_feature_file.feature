@@ -1,13 +1,10 @@
 
-@google_search   @regression_test_runner
-
+@google_search
 Feature: google search feature - this describe the name of this feature file
 
 #  BACKGROUND : used to run before each Scenario or Scenario Outline
   Background: navigation_google
     Given user is on the google home page
-
-
 
   Scenario: TC_01_iphone_search - Scenario is used to create test cases
     And user search for iPhone
@@ -20,6 +17,7 @@ Feature: google search feature - this describe the name of this feature file
     And user search for porcelain_tea_pot
     Then verify the page title contains porcelain_tea_pot
     Then close the application
+
 
 
 #    All feature files must begin with Feature: keyword

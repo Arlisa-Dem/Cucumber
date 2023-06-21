@@ -1,14 +1,11 @@
 package stepdefinitions;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.GooglePage;
+import utilities.ConfigReader;
 import utilities.Driver;
-
-
-
 public class GoogleStepDefs {
     //    Note we are not going to use @Test to create test cases anymore
 //    Cucumber created test methods using gherkin and java
@@ -43,12 +40,8 @@ public class GoogleStepDefs {
 
     @Then("verify the page title contains {string}")
     public void verify_the_page_title_contains(String string) {
-        Assert.assertFalse(Driver.getDriver().getTitle().contains(string));
+        Assert.assertTrue(Driver.getDriver().getTitle().contains(string));
 
     }
 
-    @Given("user is on the google home page")
-    public void userIsOnTheGoogleHomePage() {
-
-    }
 }

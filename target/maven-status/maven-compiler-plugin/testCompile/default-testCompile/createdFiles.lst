@@ -4,6 +4,7 @@ stepdefinitions\CommenStepDefs.class
 utilities\ReusableMethods$1.class
 utilities\Driver$1.class
 pages\GooglePage.class
+stepdefinitions\GridStepDefs.class
 stepdefinitions\ExcelStepDefs.class
 runners\SmokeTestRunner.class
 runners\RegressionTestRunner.class
@@ -20,6 +21,7 @@ stepdefinitions\BlueRentalStepDefs.class
 utilities\ExcelUtils.class
 utilities\JSUtils.class
 pages\MedunnaPage.class
+runners\GridRunner.class
 utilities\ConfigReader.class
 utilities\MediaUtils.class
 stepdefinitions\GoogleStepDefs.class

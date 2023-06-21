@@ -121,7 +121,7 @@ public class BlueRentalStepDefs {
         }
     }
     @And("test fails")
-    public void testFails() {
+    public void testFails() { //burası ne işe yarıyor
         assertTrue(false);
     }
 }

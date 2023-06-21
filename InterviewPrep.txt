@@ -1,0 +1,47 @@
+Technical Interview 1
+Can you tell me about yourself?
+Name,City,looking for job
+Can you tell me your project and experience?
+Cucumber, testng, junit, can learn new tools
+Can you tell me what is cucumber and have you use it?
+Reusable methods, steps, faster, easy to understand,…
+Testng has benefits but cucumber is better
+What is feature file and how did you use?
+Create ff first to define step defs, dry run to get the underlined step definitions.
+Sceario, excel, … can be used to test with different data
+How do you use excel in your automation framework?
+Excel utils is used to get data from excel file. Excel file has set of data.
+What is difference between data tables and scenario outline?
+SO is more popular, and should eb used with Exemples to pass data. DT no need to SO and Exemples. We can pass data in the middle steps. I prefer SO.
+Have you ever done parallel testing?
+Easier with TestNG but with cucumber possible. Possible with maven and plugins. Maven plugin??? Surefile, failsafe.cucumber-reporting-(not required but needed for reports)
+How do you get reports ?
+Spark reports to get pdf and html reports
+How many test cases in your automation scrips?
+Regression, smoke, several tests 5 classes … each has 10-100 test cases each class
+How do you maintain regression test cases?
+User story about login what are the sites you do?
+Manual testing with credentials
+Automation:
+Page objects in page class, URL, ..> Define feature file > generate step definitions > write java code> run
+Sample FF: given ,… when,… then….
+Any questions for us
+No thank you,….
+
+
+------------------------------------------------------------
+
+Recruiter Call:
+Are you available? Are you currently in the market?
+Are you authorized to work ?
+Where are you located?
+Are you open to relocate?
+Are you open for hybrid work?
+Do you know JAVA?
+What kind of tools?
+Have you created a framework from scratch?
+Where are you working currently?
+Have you ever worked with offshore team members?
+What is your rate?
+$60 per/hour are you comfortable?
+Full time $80K + benefits
