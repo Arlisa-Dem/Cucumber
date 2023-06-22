@@ -1,127 +1,71 @@
 package stepdefinitions;
 
 
-import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
+
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import pages.BRHomePage;
 import pages.BRLoginPage;
+import utilities.ReusableMethods;
 import utilities.WaitUtils;
 
 
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertTrue;
-import static utilities.ReusableMethods.verifyElementDisplayed;
 
 public class BlueRentalStepDefs {
-
     BRHomePage brHomePage = new BRHomePage();
     BRLoginPage brLoginPage = new BRLoginPage();
-
-    @When("user clicks on login button")
-    public void user_clicks_on_login_button() {
-
+    @Given("user clicks on home page login button")
+    public void user_clicks_on_home_page_login_button() {
         brHomePage.homeLoginLink.click();
-
     }
-
-    @And("user enters {string} and {string}")
-    public void userEntersAnd(String email, String password) {
-
-        brLoginPage.userEmail.sendKeys(email);
-        brLoginPage.userPassword.sendKeys(password);
-        WaitUtils.waitFor(2);
-
+    @Given("user enters {string} and {string}")
+    public void user_enters_and(String string, String string2) {
+        brLoginPage.userEmail.sendKeys(string);
+        brLoginPage.userPassword.sendKeys(string2);
+        WaitUtils.waitFor(1);
     }
-
-
-    @When("user clicks on login submit button")
-    public void user_clicks_on_login_submit_button() {
-
+    @Given("user clicks on the login page login button")
+    public void user_clicks_on_the_login_page_login_button() {
         brLoginPage.loginSubmitButton.click();
-        //assertTrue(false);//Failed on purpose
-
     }
-
-    @Then("verify the login is successful")
-    public void verify_the_login_is_successful() {
-
-        //assertTrue(brHomePage.userID.isDisplayed());
-        verifyElementDisplayed(brHomePage.homeLoginLink);
-
+    @Then("verify the default page is visible")
+    public void verify_the_default_page_is_visible() {
+//        if userid is displayed then default page is visible
+        ReusableMethods.verifyElementDisplayed(brHomePage.userID);
     }
 
     @Then("user logs out the application")
-    public void user_logs_out_the_application() {
+    public void userLogsOutTheApplication() {
         WaitUtils.waitFor(1);
         brHomePage.userID.click();
         WaitUtils.waitFor(1);
         brHomePage.logOut.click();
         WaitUtils.waitFor(1);
         brHomePage.OK.click();
-
+        WaitUtils.waitFor(1);
     }
+    @Given("user enters customer_email and customer_password")
+    public void user_enters_customer_email_and_customer_password(io.cucumber.datatable.DataTable credentials) {
+        /*
+//      1. GET DATA AS LIST<STRING>
+        List<String> customerData=credentials.row(1);
+//        System.out.println(customerData);//[jack@gmail.com, 12345]
+        brLoginPage.userEmail.sendKeys(customerData.get(0));//jack@gmail.com
+        brLoginPage.userPass.sendKeys(customerData.get(1));//12345
 
-    @When("user enters username and password")
-    public void user_enters_username_and_password(DataTable dataTable) {
+         */
 
-        //1st Way: List<String>
-//        List<String> usernameAndPassword = dataTable.row(1);//index stars with 0
-//        System.out.println("usernameAndPassword = " + usernameAndPassword);//[sam.walker@bluerentalcars.com, c!fas_art]
-//        WaitUtils.waitFor(1);
-//        brLoginPage.userEmail.sendKeys(usernameAndPassword.get(0));//sam.walker@bluerentalcars.com
-//        WaitUtils.waitFor(1);
-//        brLoginPage.userPassword.sendKeys(usernameAndPassword.get(1));//c!fas_art
-
-//        //2nd Way: List<Map<String,String>> --> With indexes
-//        List<Map<String, String>> usernameAndPassword = dataTable.asMaps();
-//        System.out.println("usernameAndPassword = " + usernameAndPassword);//[{username=sam.walker@bluerentalcars.com, password=c!fas_art}]
-//        WaitUtils.waitFor(1);
-//        brLoginPage.userEmail.sendKeys(usernameAndPassword.get(0).get("username"));
-//        WaitUtils.waitFor(1);
-//        brLoginPage.userPassword.sendKeys(usernameAndPassword.get(0).get("password"));
-
-        //2nd Way:  List<Map<String,String>> --> With foreach loop
-        List<Map<String, String>> usernameAndPassword = dataTable.asMaps();
-        System.out.println("usernameAndPassword = " + usernameAndPassword);//[{username=sam.walker@bluerentalcars.com, password=c!fas_art}]
-
-        for (Map<String, String> w : usernameAndPassword){
-
-            brLoginPage.userEmail.sendKeys(w.get("username"));
-            WaitUtils.waitFor(1);
-            brLoginPage.userPassword.sendKeys(w.get("password"));
-            WaitUtils.waitFor(1);
-
+//        2. LIST<MAP<STRING,STRING>>
+        List<Map<String,String>> customerData = credentials.asMaps(String.class,String.class);
+        System.out.println(customerData);//[{email=jack@gmail.com, password=12345}]
+        for (Map<String,String> each : customerData){
+            brLoginPage.userEmail.sendKeys(each.get("email"));//jack@gmail.com
+            brLoginPage.userPassword.sendKeys(each.get("password"));//12345
         }
 
-    }
 
-    @When("user enters username and password loop")
-    public void user_enters_username_and_password_loop(DataTable dataTable) {
-        List<Map<String, String>> usernameAndPassword = dataTable.asMaps();
-        System.out.println("usernameAndPassword = " + usernameAndPassword);
-        for (Map<String, String> w : usernameAndPassword){
-            brHomePage.homeLoginLink.click();
-            brLoginPage.userEmail.sendKeys(w.get("username"));
-            WaitUtils.waitFor(1);
-            brLoginPage.userPassword.sendKeys(w.get("password"));
-            WaitUtils.waitFor(1);
-            brLoginPage.loginSubmitButton.click();
-            WaitUtils.waitFor(1);
-            WaitUtils.waitFor(1);
-            brHomePage.userID.click();
-            WaitUtils.waitFor(1);
-            brHomePage.logOut.click();
-            WaitUtils.waitFor(1);
-            brHomePage.OK.click();
-
-        }
-    }
-    @And("test fails")
-    public void testFails() { //burası ne işe yarıyor
-        assertTrue(false);
     }
 }

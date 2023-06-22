@@ -64,12 +64,21 @@
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.13.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.8.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
+
+    <!--    AFTER DEPENDENCIES BORE PROJECT-->
     <build>
         <plugins>
             <!--        1. MAKES THE FAILURE SAFE DURING PARALLEL TESTING.
-IF ONE BROWSER FAILS, OTHER PARALLEL TEST CASES CONTINUE TO EXECUTE-->
+            IF ONE BROWSER FAILS, OTHER PARALLEL TEST CASES CONTINUE TO EXECUTE-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -82,7 +91,7 @@ IF ONE BROWSER FAILS, OTHER PARALLEL TEST CASES CONTINUE TO EXECUTE-->
                     </includes>
                 </configuration>
             </plugin>
-<!--            2. RESPONSIBLE FOR PARALLEL TESTING -->
+            <!--            2. RESPONSIBLE FOR PARALLEL TESTING -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -103,7 +112,7 @@ IF ONE BROWSER FAILS, OTHER PARALLEL TEST CASES CONTINUE TO EXECUTE-->
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
-<!--            3. GENERATES REPORTS AFTER TEST EXECUTION WITH MAVEN-->
+            <!--            3. GENERATES REPORTS AFTER TEST EXECUTION WITH MAVEN-->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -130,6 +139,7 @@ IF ONE BROWSER FAILS, OTHER PARALLEL TEST CASES CONTINUE TO EXECUTE-->
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 

@@ -2,16 +2,15 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.And;
+import org.junit.Assert;
 import pages.GooglePage;
 import utilities.Driver;
 import utilities.MediaUtils;
 
 import java.io.IOException;
 
-public class CommenStepDefs {
-
-    GooglePage googlePage = new GooglePage();
+public class CommonStepDefs {
 
     @Then("close the application")
     public void close_the_application() {
@@ -22,14 +21,19 @@ public class CommenStepDefs {
     public void user_navigates_to(String string) {
         Driver.getDriver().get(string);
         try{
+            GooglePage googlePage = new GooglePage();
             googlePage.popUpAccept.click();//If there is a pop up on google clicking
         }catch (Exception e){
-
         }
     }
 
-    @When("capture screenshot")
-    public void captureScreenshot() throws IOException {
+    @Then("verify the page title contains {string}")
+    public void verify_the_page_title_contains(String string) {
+        Assert.assertTrue(Driver.getDriver().getTitle().contains(string));
+    }
+
+    @And("capture the screenshot")
+    public void captureTheScreenshot() throws IOException {
         MediaUtils.takeScreenshotOfTheEntirePage();
     }
 }

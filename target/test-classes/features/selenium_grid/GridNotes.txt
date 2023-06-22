@@ -1,0 +1,39 @@
+---Selenium Grid---
+Official Document: https://www.selenium.dev/documentation/grid/
+*Installation:
+1. Prerequisites:
+Install: Java 11 or higher
+Install: The browsers(Chrome, Edge, Firefox)
+Download: Drivers (Chrome, Edge, Firefox)
+          Chrome: https://chromedriver.chromium.org/
+          Firefox: https://github.com/mozilla/geckodriver/releases
+          Edge: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+          Selenium Server: https://www.selenium.dev/downloads/
+2. Create a folder "SeleniumServer" under project
+          Unzip the drivers and server and put them into this folder
+3. Open the terminal on the "SeleniumServer" folder.(Change directory to this address)
+          -run cd SeleniumServer
+          or
+          -right click on the folder and select open in --> terminal
+4. run "java -jar selenium-server-4.10.0.jar standalone" command
+   After run you should see " Started Selenium Standalone 4.10.0 (revision c14d967899): http://192.168.1.126:4444" message
+   This means, selenium grid is up and running
+5. Create a RemoteWebDriver object and use it in your tests. Do NOT use singleton driver in your project.
+6. Create grid.feature file
+7. Put the missing step definitions in to step definitions class.
+8. Rest is same ...(Selenium)
+-To close the server do ctrl+c
+-If the server is not up and running when you run the test you will have SessionNotCreatedException
+-If you want to restart the server run "java -jar selenium-server-4.10.0.jar standalone"
+-In Test NG framework we can run the tests in parallel by using xml file
+    -Create a RemoteWebDriver object and use it in your tests
+    -Create xml file for the related classes(right-click on the classes or package --> "Create TestNG XML")
+    -Open the xml file and reformat the codes.
+    -Add parallel and thread-count sections in suite
+    -Run the XML file
+--What is Selenium Grid--
+    -Selenium Grid is a tool for remote test and cross browser testing
+        -It runs the tests on RemoteWebDriver
+        -It does cross browser testing
+        -It runs the tests on different browsers and operating systems
+        -It runs the tests in parallel

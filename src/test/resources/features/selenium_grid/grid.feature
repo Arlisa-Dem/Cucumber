@@ -1,20 +1,20 @@
 @GridTest
-
 Feature: grid_feature
+
   @GridChrome
   Scenario: TC01_running_on_chrome
     Given user is on the application with chrome
     Then verify the title is "Blue Rental Cars | Cheap, Hygienic, VIP Car Hire"
     And close the remote driver
 
-   @GridfireFox #download the geckodriver.exe
+  @GridFireFox
   Scenario: TC02_running_on_firefox
-    Given user is on the application with chrome
+    Given user is on the application with firefox
     Then verify the title is "Blue Rental Cars | Cheap, Hygienic, VIP Car Hire"
     And close the remote driver
 
   @GridEdge
-  Scenario: TC03_running_on_firefox
+  Scenario: TC03_running_on_edge
     Given user is on the application with edge
     Then verify the title is "Blue Rental Cars | Cheap, Hygienic, VIP Car Hire"
     And close the remote driver

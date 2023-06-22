@@ -1,7 +1,7 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -17,34 +17,40 @@ import static org.junit.Assert.assertEquals;
 
 public class GridStepDefs {
 
-     WebDriver driver;
-
+    WebDriver driver;
 
     @Given("user is on the application with chrome")
     public void user_is_on_the_application_with_chrome() throws MalformedURLException {
-       driver =  new RemoteWebDriver(new URL("http://192.168.178.48:4444"),new ChromeOptions());
-       //Rest is Selenium
-       driver.manage().window().maximize();
-       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-       driver.get("https://bluerentalcars.com");
-       }
+
+        driver = new RemoteWebDriver(new URL("http://localhost:4444"), new ChromeOptions());
+        //Rest is selenium (same)
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://www.bluerentalcars.com/");
+
+    }
 
     @Then("verify the title is {string}")
     public void verify_the_title_is(String title) {
+
         String actualTitle = driver.getTitle();
-        assertEquals(title,actualTitle);
-       }
+        assertEquals(title, actualTitle);
+
+    }
 
     @Then("close the remote driver")
     public void close_the_remote_driver() {
+
         WaitUtils.waitFor(3);
         driver.quit();
-      }
+
+    }
+
+
     @Given("user is on the application with firefox")
     public void userIsOnTheApplicationWithFirefox() throws MalformedURLException {
 
         driver = new RemoteWebDriver(new URL("http://localhost:4444"), new FirefoxOptions());
-        //Rest is selenium (same)
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.bluerentalcars.com/");
@@ -55,7 +61,6 @@ public class GridStepDefs {
     public void userIsOnTheApplicationWithEdge() throws MalformedURLException {
 
         driver = new RemoteWebDriver(new URL("http://localhost:4444"), new EdgeOptions());
-        //Rest is selenium (same)
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.bluerentalcars.com/");
