@@ -4,7 +4,7 @@
 
     Background: user_goes_to_google
 
-      Given user navigates to "https://www.google.com"
+      Given user is on the google home page
 
       Scenario: TC01_iphone_search
         And user search for "iPhone"

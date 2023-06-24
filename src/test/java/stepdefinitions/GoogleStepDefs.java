@@ -6,6 +6,8 @@ import org.openqa.selenium.Keys;
 import pages.GooglePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.JSUtils;
+import utilities.WaitUtils;
 
 
 public class GoogleStepDefs {
@@ -17,13 +19,17 @@ public class GoogleStepDefs {
 
     GooglePage googlePage = new GooglePage();
     @Given("user is on the google home page")
-    public void user_is_on_the_google_home_page() throws InterruptedException {
+    public void user_is_on_the_google_home_page(){
         Driver.getDriver().get(ConfigReader.getProperty("google_url"));
+        GooglePage googlePage = new GooglePage();
         try{
-            googlePage.popUpAccept.click();//If there is a pop up on google clicking
+
+            WaitUtils.waitForVisibility(googlePage.popUpAccept,10);
+            JSUtils.clickWithTimeoutByJS(googlePage.popUpAccept);
+            //    googlePage.popUpAccept.click();//If there is a pop up on google clicking
         }catch (Exception e){
+            googlePage.popUpAccept.click();
         }
-        Thread.sleep(3000);
     }
     @Given("user search for iPhone")
     public void user_search_for_i_phone() {

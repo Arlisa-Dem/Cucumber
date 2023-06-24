@@ -6,7 +6,9 @@ import io.cucumber.java.en.And;
 import org.junit.Assert;
 import pages.GooglePage;
 import utilities.Driver;
+import utilities.JSUtils;
 import utilities.MediaUtils;
+import utilities.WaitUtils;
 
 import java.io.IOException;
 
@@ -20,11 +22,7 @@ public class CommonStepDefs {
     @Given("user navigates to {string}")
     public void user_navigates_to(String string) {
         Driver.getDriver().get(string);
-        try{
-            GooglePage googlePage = new GooglePage();
-            googlePage.popUpAccept.click();//If there is a pop up on google clicking
-        }catch (Exception e){
-        }
+
     }
 
     @Then("verify the page title contains {string}")

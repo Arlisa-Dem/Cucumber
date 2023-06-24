@@ -12,6 +12,7 @@ public class GooglePage {
     @FindBy(name = "q")
     public WebElement searchBox;
 
-    @FindBy(xpath = "(//div[@class='QS5gu sy4vM'])[2]")
+    @FindBy(xpath = "//button[.='Alle akzeptieren']")
     public WebElement popUpAccept;
+    //(//div[@class='QS5gu sy4vM'])[2]
 }
