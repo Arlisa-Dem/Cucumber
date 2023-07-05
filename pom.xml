@@ -107,7 +107,7 @@
                     <parallel>classes</parallel>
                     <forkMode>perthread</forkMode>
                     <threadCount>3</threadCount>
-                    <forkCount>false</forkCount>
+                    <reuseForks>false</reuseForks>
                     <argLine>-Duser.language=en</argLine>
                     <argLine>-Xmx1024m</argLine>
                     <argLine>-XX:MaxPermSize=256m</argLine>

@@ -21,14 +21,14 @@ public class GoogleStepDefs {
     @Given("user is on the google home page")
     public void user_is_on_the_google_home_page(){
         Driver.getDriver().get(ConfigReader.getProperty("google_url"));
-        GooglePage googlePage = new GooglePage();
+        WaitUtils.waitFor(5);
         try{
-
-            WaitUtils.waitForVisibility(googlePage.popUpAccept,10);
-            JSUtils.clickWithTimeoutByJS(googlePage.popUpAccept);
-            //    googlePage.popUpAccept.click();//If there is a pop up on google clicking
+           // WaitUtils.waitForVisibility(googlePage.popUpAccept,10);
+            //JSUtils.clickWithTimeoutByJS(googlePage.popUpAccept);
+           googlePage.popUpAccept.click();//If there is a pop up on google clicking
+            WaitUtils.waitFor(5);
         }catch (Exception e){
-            googlePage.popUpAccept.click();
+           // googlePage.popUpAccept.click();
         }
     }
     @Given("user search for iPhone")

@@ -14,6 +14,7 @@ utilities\Driver.class
 runners\FailedRunner.class
 utilities\JSUtils.class
 pages\MedunnaPage.class
+pages\DataTablesPage.class
 runners\GridRunner.class
 utilities\MediaUtils.class
 stepdefinitions\GoogleStepDefs.class
@@ -21,6 +22,8 @@ hooks\Hooks.class
 pages\BRLoginPage.class
 utilities\WaitUtils$1.class
 utilities\ReusableMethods$1.class
+runners\DBRunner.class
+stepdefinitions\DBStepDefs.class
 pages\GooglePage.class
 utilities\ReusableMethods.class
 pages\BRHomePage.class
@@ -28,4 +31,6 @@ stepdefinitions\MeddunaStepDefs.class
 testng_tests\TitleTest_FireFox.class
 stepdefinitions\BlueRentalStepDefs.class
 utilities\ExcelUtils.class
+stepdefinitions\DataTablesStepDefs.class
 utilities\ConfigReader.class
+utilities\DBUtils.class

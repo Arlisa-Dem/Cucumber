@@ -1,0 +1,30 @@
+
+Pre-Conditions
+
+The environment
+should be ready
+https://managementonschools.com/
+
+-----------------------------------------------------------------------------------------
+
+Test Steps
+
+1_User navigates to the application "https://managementonschools.com/contact".
+2_Fill "Your Name" which containing any character and cannot be left blank must be entered
+3_The user must enter their email address. The email address must contain the characters "@" and ".".
+4_The user must enter a subject about the message they will write
+5_The user must write a message. The user must not send empty message
+6_Click on Send Message.The user should be able to send their message.
+
+-------------------------------------------------------------------------------------
+
+Test Data
+
+https://managementonschools.com/contact
+
+
+---------------------------------------------------------------------------------------
+
+Expected Result
+
+I should see the Alert message is showing - Contact Message Created Successfully

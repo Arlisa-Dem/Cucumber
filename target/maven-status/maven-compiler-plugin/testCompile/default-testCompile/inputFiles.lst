@@ -10,8 +10,10 @@ C:\Users\49163\IdeaProjects\Cucumber\src\test\java\pages\BRHomePage.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\stepdefinitions\MeddunaStepDefs.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\pages\DataTablesPage.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\runners\Runner.java
+C:\Users\49163\IdeaProjects\Cucumber\src\test\java\runners\DBRunner.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\stepdefinitions\GoogleStepDefs.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\utilities\MediaUtils.java
+C:\Users\49163\IdeaProjects\Cucumber\src\test\java\stepdefinitions\DBStepDefs.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\stepdefinitions\ExcelStepDefs.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\utilities\WaitUtils.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\hooks\Hooks.java
@@ -22,6 +24,7 @@ C:\Users\49163\IdeaProjects\Cucumber\src\test\java\stepdefinitions\GridStepDefs.
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\pages\GooglePage.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\stepdefinitions\CommonStepDefs.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\utilities\Driver.java
+C:\Users\49163\IdeaProjects\Cucumber\src\test\java\utilities\DBUtils.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\utilities\ConfigReader.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\runners\TestRunner.java
 C:\Users\49163\IdeaProjects\Cucumber\src\test\java\pages\BRLoginPage.java
